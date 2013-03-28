@@ -41,9 +41,9 @@ int tries;
         [self randomPick];
     }
     NSLog(@"Number chosen at random: %d",randomNum);
-    return randomNum;
     tries = 0;
     self.playAgain.hidden = YES;
+    return randomNum;
     
 }
 - (void) nag
@@ -64,7 +64,7 @@ int tries;
     // you got it! msg
     [self.winLabel setText:@"You win!"];
     
-    //self.playAgain.hidden = NO;
+    self.playAgain.hidden = NO;
     
 }
 - (void) lose
