@@ -31,6 +31,32 @@ int totalLosses;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    // check to see if user has too many losses
+    BOOL overage = [[NSUserDefaults standardUserDefaults]boolForKey:@"heavyLosses"];
+    if(overage)
+    {
+        // remove all the buttons from the screen
+        self.oneBtn.hidden = YES;
+        self.twoBtn.hidden = YES;
+        self.threeBtn.hidden = YES;
+        self.fourBtn.hidden = YES;
+        self.fiveBtn.hidden = YES;
+        self.sixBtn.hidden = YES;
+        self.sevenBtn.hidden = YES;
+        self.eightBtn.hidden = YES;
+        self.nineBtn.hidden = YES;
+        self.cat1.hidden = YES;
+        self.cat2.hidden = YES;
+        self.cat3.hidden = YES;
+        
+        // send game message
+        [self.winLabel setText:@"Game over."];
+        
+        // reset game message
+        [self nag];
+    }
+    
     [self randomPick];
     // hide win markers (black cats)
     self.cat1.hidden = YES;
@@ -118,10 +144,22 @@ int totalLosses;
         [self.winLabel setText:@"Game over."];
         // reset game message
         [self nag];
+        [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"heavyLosses"];
     }
     else
     {
         [self.winLabel setText:@"You lose!"];
+        // remove all the buttons from the screen
+        self.oneBtn.hidden = YES;
+        self.twoBtn.hidden = YES;
+        self.threeBtn.hidden = YES;
+        self.fourBtn.hidden = YES;
+        self.fiveBtn.hidden = YES;
+        self.sixBtn.hidden = YES;
+        self.sevenBtn.hidden = YES;
+        self.eightBtn.hidden = YES;
+        self.nineBtn.hidden = YES;
+        
         self.playAgain.hidden = NO;
     }
 }
