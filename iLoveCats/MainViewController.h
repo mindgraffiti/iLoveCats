@@ -21,5 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *nineBtn;
 @property (strong, nonatomic) IBOutlet UIButton *playAgain;
 @property (strong, nonatomic) IBOutlet UIImageView *cat1;
+@property (strong, nonatomic) IBOutlet UIImageView *cat2;
+@property (strong, nonatomic) IBOutlet UIImageView *cat3;
 
 @end

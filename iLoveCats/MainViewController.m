@@ -7,12 +7,15 @@
 //
 
 #import "MainViewController.h"
+#import "WinViewController.h"
 
 @interface MainViewController ()
 
 @end
 int randomNum;
 int tries;
+int totalWins;
+int totalLosses;
 @implementation MainViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,6 +32,10 @@ int tries;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self randomPick];
+    // hide win markers (black cats)
+    self.cat1.hidden = YES;
+    self.cat2.hidden = YES;
+    self.cat3.hidden = YES;
     
 }
 
@@ -59,18 +66,64 @@ int tries;
 */
 - (void) win
 {
-    // show a cat
-    
-    // you got it! msg
-    [self.winLabel setText:@"You win!"];
-    
-    self.playAgain.hidden = NO;
-    
+    if(totalWins == 3)
+    {
+        // show new view with happy cat
+        
+    }
+    else
+    {
+        // count up wins
+        totalWins++;
+        if(totalWins == 1)
+        {
+            // show a cat
+            self.cat1.hidden = NO;
+        }
+        else if(totalWins == 2)
+        {
+            self.cat2.hidden = NO;
+        }
+        else if(totalWins == 3){
+            self.cat3.hidden = NO;
+            // point to where winView is located
+            WinViewController *view;
+            // alloc memory to winView
+            view = [[WinViewController alloc ]init];
+            // move them to the winView
+            [self presentViewController:view animated:YES completion:Nil];
+        }
+        // you got it! msg
+        [self.winLabel setText:@"You win! Have a cat."];
+        // show play again button
+        self.playAgain.hidden = NO;
+    }
 }
 - (void) lose
 {
-    [self.winLabel setText:@"You lose!"];
-    [self nag];
+    totalLosses++;
+    if(totalLosses == 4)
+    {
+        // remove all the buttons from the screen
+        self.oneBtn.hidden = YES;
+        self.twoBtn.hidden = YES;
+        self.threeBtn.hidden = YES;
+        self.fourBtn.hidden = YES;
+        self.fiveBtn.hidden = YES;
+        self.sixBtn.hidden = YES;
+        self.sevenBtn.hidden = YES;
+        self.eightBtn.hidden = YES;
+        self.nineBtn.hidden = YES;
+        // send game message
+        [self.winLabel setText:@"Game over."];
+        // reset game message
+        [self nag];
+    }
+    else
+    {
+        [self.winLabel setText:@"You lose!"];
+        self.playAgain.hidden = NO;
+    }
 }
 - (IBAction)btn1Pressed:(id)sender
 {
@@ -230,6 +283,16 @@ int tries;
     [self randomPick];
     // show all the buttons again
     self.oneBtn.hidden = NO;
+    self.twoBtn.hidden = NO;
+    self.threeBtn.hidden = NO;
+    self.fourBtn.hidden = NO;
+    self.fiveBtn.hidden = NO;
+    self.sixBtn.hidden = NO;
+    self.sevenBtn.hidden = NO;
+    self.eightBtn.hidden = NO;
+    self.nineBtn.hidden = NO;
+    // reset game message
+    [self.winLabel setText: @"Guess a number."];
 }
 - (void)didReceiveMemoryWarning
 {
