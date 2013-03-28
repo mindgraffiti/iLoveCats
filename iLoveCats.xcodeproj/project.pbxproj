@@ -26,6 +26,9 @@
 		AFACE30A1704981300768A46 /* WinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFACE3081704981300768A46 /* WinViewController.xib */; };
 		AFACE30C17049AA900768A46 /* happy-cat-1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFACE30B17049AA900768A46 /* happy-cat-1024.jpg */; };
 		AFACE30E17049AF000768A46 /* 09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFACE30D17049AF000768A46 /* 09.jpg */; };
+		AFACE31017049DCF00768A46 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AFACE30F17049DCF00768A46 /* Default.png */; };
+		AFACE31217049F2D00768A46 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFACE31117049F2D00768A46 /* Default@2x.png */; };
+		AFACE31417049F5000768A46 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFACE31317049F5000768A46 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		AFACE3081704981300768A46 /* WinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WinViewController.xib; path = iLoveCats/WinViewController.xib; sourceTree = "<group>"; };
 		AFACE30B17049AA900768A46 /* happy-cat-1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "happy-cat-1024.jpg"; sourceTree = "<group>"; };
 		AFACE30D17049AF000768A46 /* 09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09.jpg; sourceTree = "<group>"; };
+		AFACE30F17049DCF00768A46 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AFACE31117049F2D00768A46 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AFACE31317049F5000768A46 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 		AF974B401703AEF800DE65D0 = {
 			isa = PBXGroup;
 			children = (
+				AFACE31317049F5000768A46 /* Default-568h@2x.png */,
+				AFACE31117049F2D00768A46 /* Default@2x.png */,
+				AFACE30F17049DCF00768A46 /* Default.png */,
 				AFACE3061704981300768A46 /* WinViewController.h */,
 				AFACE3071704981300768A46 /* WinViewController.m */,
 				AFACE3081704981300768A46 /* WinViewController.xib */,
@@ -204,6 +213,9 @@
 				AFACE30A1704981300768A46 /* WinViewController.xib in Resources */,
 				AFACE30C17049AA900768A46 /* happy-cat-1024.jpg in Resources */,
 				AFACE30E17049AF000768A46 /* 09.jpg in Resources */,
+				AFACE31017049DCF00768A46 /* Default.png in Resources */,
+				AFACE31217049F2D00768A46 /* Default@2x.png in Resources */,
+				AFACE31417049F5000768A46 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
