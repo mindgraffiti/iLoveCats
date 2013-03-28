@@ -159,7 +159,10 @@
 						<reference key="IBUIHighlightedTitleColor" ref="855963272"/>
 						<reference key="IBUINormalTitleColor" ref="39819639"/>
 						<reference key="IBUINormalTitleShadowColor" ref="159976912"/>
-						<reference key="IBUINormalBackgroundImage" ref="83582779"/>
+						<object class="NSCustomResource" key="IBUINormalBackgroundImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">cat_5.png</string>
+						</object>
 						<reference key="IBUIFontDescription" ref="839384575"/>
 						<reference key="IBUIFont" ref="130539826"/>
 					</object>
@@ -2305,6 +2308,7 @@
 			<string key="Button-Blank-Yellow-icon.png">{128, 128}</string>
 			<string key="black_cat.png">{256, 256}</string>
 			<string key="cat-logo.png">{240, 100}</string>
+			<string key="cat_5.png">{256, 256}</string>
 			<string key="play-again.png">{195, 47}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
