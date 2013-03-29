@@ -64,6 +64,7 @@ int totalLosses;
     NSLog(@"Number chosen at random: %d",randomNum);
     tries = 0;
     self.playAgain.hidden = YES;
+    [self.guessButtons setValue:[NSNumber numberWithBool:YES] forKey:@"enabled"];
     return randomNum;
     
 }
@@ -102,6 +103,8 @@ int totalLosses;
             // move them to the winView
             [self presentViewController:view animated:YES completion:Nil];
         }
+        // disable buttons for further guessing
+        [self.guessButtons setValue:[NSNumber numberWithBool:NO] forKey:@"enabled"];
         // you got it! msg
         [self.winLabel setText:@"You win! Have a cat."];
         // show play again button
