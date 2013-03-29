@@ -279,7 +279,7 @@
 					<object class="IBUIImageView" id="808084814">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{63, 480}, {48, 48}}</string>
+						<string key="NSFrame">{{62, 480}, {48, 48}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="151701282"/>
@@ -407,14 +407,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">cat1</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="808084814"/>
-					</object>
-					<int key="connectionID">361</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">winLabel</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="498609559"/>
@@ -428,22 +420,6 @@
 						<reference key="destination" ref="396085302"/>
 					</object>
 					<int key="connectionID">371</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">cat2</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="151701282"/>
-					</object>
-					<int key="connectionID">373</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">cat3</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="341737617"/>
-					</object>
-					<int key="connectionID">374</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
@@ -534,6 +510,60 @@
 						<bool key="addsContentToExistingCollection">NO</bool>
 					</object>
 					<int key="connectionID">399</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">catTally</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="808084814"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">400</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">catTally</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="151701282"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">401</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">catTally</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="341737617"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">402</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">cat1</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="808084814"/>
+					</object>
+					<int key="connectionID">403</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">cat2</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="151701282"/>
+					</object>
+					<int key="connectionID">404</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">cat3</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="341737617"/>
+					</object>
+					<int key="connectionID">405</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -734,6 +764,22 @@
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
+							<object class="IBNSLayoutConstraint" id="760118245">
+								<reference key="firstItem" ref="808084814"/>
+								<int key="firstAttribute">5</int>
+								<int key="relation">0</int>
+								<reference key="secondItem" ref="191373211"/>
+								<int key="secondAttribute">5</int>
+								<float key="multiplier">1</float>
+								<object class="IBLayoutConstant" key="constant">
+									<double key="value">62</double>
+								</object>
+								<float key="priority">1000</float>
+								<reference key="containingView" ref="191373211"/>
+								<int key="scoringType">3</int>
+								<float key="scoringTypeFloat">9</float>
+								<int key="contentType">3</int>
+							</object>
 							<object class="IBNSLayoutConstraint" id="107912910">
 								<reference key="firstItem" ref="191373211"/>
 								<int key="firstAttribute">4</int>
@@ -749,22 +795,6 @@
 								<int key="scoringType">8</int>
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
-							</object>
-							<object class="IBNSLayoutConstraint" id="415256904">
-								<reference key="firstItem" ref="808084814"/>
-								<int key="firstAttribute">5</int>
-								<int key="relation">0</int>
-								<reference key="secondItem" ref="396085302"/>
-								<int key="secondAttribute">5</int>
-								<float key="multiplier">1</float>
-								<object class="IBLayoutConstant" key="constant">
-									<double key="value">0.0</double>
-								</object>
-								<float key="priority">1000</float>
-								<reference key="containingView" ref="191373211"/>
-								<int key="scoringType">6</int>
-								<float key="scoringTypeFloat">24</float>
-								<int key="contentType">2</int>
 							</object>
 							<object class="IBNSLayoutConstraint" id="426192779">
 								<reference key="firstItem" ref="396085302"/>
@@ -1625,11 +1655,6 @@
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">102</int>
-						<reference key="object" ref="415256904"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">107</int>
 						<reference key="object" ref="107912910"/>
 						<reference key="parent" ref="191373211"/>
@@ -1986,6 +2011,11 @@
 						<reference key="object" ref="1003206574"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">406</int>
+						<reference key="object" ref="760118245"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -2031,8 +2061,8 @@
 					<reference ref="516185133"/>
 					<reference ref="861737467"/>
 					<reference ref="426192779"/>
-					<reference ref="415256904"/>
 					<reference ref="107912910"/>
+					<reference ref="760118245"/>
 					<reference ref="361014517"/>
 					<reference ref="583832535"/>
 					<reference ref="819848222"/>
@@ -2040,7 +2070,6 @@
 					<reference ref="667414314"/>
 					<reference ref="4420733"/>
 				</array>
-				<string key="102.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="107.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="108.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="109.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -2143,6 +2172,7 @@
 					<reference ref="546699778"/>
 				</array>
 				<boolean value="NO" key="4.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
+				<string key="406.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<array key="7.IBViewMetadataConstraints">
@@ -2169,7 +2199,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">399</int>
+			<int key="maxID">406</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2219,14 +2249,18 @@
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>
-					<object class="NSMutableDictionary" key="toManyOutletInfosByName">
-						<string key="NS.key.0">guessButtons</string>
-						<object class="IBToManyOutletInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="toManyOutletInfosByName">
+						<object class="IBToManyOutletInfo" key="catTally">
+							<string key="name">catTally</string>
+							<string key="candidateClassName">UIImageView</string>
+							<string key="collectionClassName">NSArray</string>
+						</object>
+						<object class="IBToManyOutletInfo" key="guessButtons">
 							<string key="name">guessButtons</string>
 							<string key="candidateClassName">UIButton</string>
 							<string key="collectionClassName">NSArray</string>
 						</object>
-					</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/MainViewController.h</string>

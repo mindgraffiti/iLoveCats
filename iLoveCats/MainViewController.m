@@ -94,7 +94,7 @@ int totalLosses;
             self.cat2.hidden = NO;
         }
         else if(totalWins == 3){
-            self.cat3.hidden = NO;
+            [self.catTally setValue:[NSNumber numberWithBool:NO] forKey:@"hidden"];
             // point to where winView is located
             WinViewController *view;
             // alloc memory to winView
@@ -140,9 +140,7 @@ int totalLosses;
 
 - (void) hideWins
 {
-    self.cat1.hidden = YES;
-    self.cat2.hidden = YES;
-    self.cat3.hidden = YES;
+    [self.catTally setValue:[NSNumber numberWithBool:YES] forKey:@"hidden"];
 }
 - (IBAction)btnSelected:(id)sender
 {
@@ -164,7 +162,6 @@ int totalLosses;
         [btnPushed setHidden: YES];
     }
 }
-
 - (IBAction)btnPlayAgainPressed:(id)sender
 {
     [self randomPick];
