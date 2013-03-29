@@ -37,18 +37,8 @@ int totalLosses;
     if(overage)
     {
         // remove all the buttons from the screen
-        self.oneBtn.hidden = YES;
-        self.twoBtn.hidden = YES;
-        self.threeBtn.hidden = YES;
-        self.fourBtn.hidden = YES;
-        self.fiveBtn.hidden = YES;
-        self.sixBtn.hidden = YES;
-        self.sevenBtn.hidden = YES;
-        self.eightBtn.hidden = YES;
-        self.nineBtn.hidden = YES;
-        self.cat1.hidden = YES;
-        self.cat2.hidden = YES;
-        self.cat3.hidden = YES;
+        [self hideBtns];
+        [self hideWins];
         
         // send game message
         [self.winLabel setText:@"Game over."];
@@ -59,9 +49,7 @@ int totalLosses;
     
     [self randomPick];
     // hide win markers (black cats)
-    self.cat1.hidden = YES;
-    self.cat2.hidden = YES;
-    self.cat3.hidden = YES;
+    [self hideWins];
     
 }
 
@@ -84,12 +72,7 @@ int totalLosses;
     UIAlertView *msgNag = [[UIAlertView alloc]initWithTitle:@"No free beer." message:@"You suck and you should feel bad!" delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     [msgNag show];
 }
-/* 
-- (IBAction)hideBlackCats:(id)sender
-{
-    self.cat1.hidden = YES;
-}
-*/
+
 - (void) win
 {
     if(totalWins == 3)
@@ -131,15 +114,7 @@ int totalLosses;
     if(totalLosses == 4)
     {
         // remove all the buttons from the screen
-        self.oneBtn.hidden = YES;
-        self.twoBtn.hidden = YES;
-        self.threeBtn.hidden = YES;
-        self.fourBtn.hidden = YES;
-        self.fiveBtn.hidden = YES;
-        self.sixBtn.hidden = YES;
-        self.sevenBtn.hidden = YES;
-        self.eightBtn.hidden = YES;
-        self.nineBtn.hidden = YES;
+        [self hideBtns];
         // send game message
         [self.winLabel setText:@"Game over."];
         // reset game message
@@ -150,185 +125,53 @@ int totalLosses;
     {
         [self.winLabel setText:@"You lose!"];
         // remove all the buttons from the screen
-        self.oneBtn.hidden = YES;
-        self.twoBtn.hidden = YES;
-        self.threeBtn.hidden = YES;
-        self.fourBtn.hidden = YES;
-        self.fiveBtn.hidden = YES;
-        self.sixBtn.hidden = YES;
-        self.sevenBtn.hidden = YES;
-        self.eightBtn.hidden = YES;
-        self.nineBtn.hidden = YES;
-        
+        [self hideBtns];
         self.playAgain.hidden = NO;
     }
 }
-- (IBAction)btn1Pressed:(id)sender
+- (void) hideBtns
 {
+    [self.guessButtons setValue: [NSNumber numberWithBool:YES] forKey:@"hidden"];
+}
+- (void) showBtns
+{
+    [self.guessButtons setValue:[NSNumber numberWithBool:NO] forKey:@"hidden"];
+}
+
+- (void) hideWins
+{
+    self.cat1.hidden = YES;
+    self.cat2.hidden = YES;
+    self.cat3.hidden = YES;
+}
+- (IBAction)btnSelected:(id)sender
+{
+    UIButton *btnPushed = (UIButton *)sender;
+    NSLog(@"Button pressed: %@",[sender currentTitle]);
     tries++;
-    if(randomNum == 1 && tries <=4)
+    
+    if(randomNum == [[sender currentTitle] integerValue]&& tries <= 4)
     {
         [self win];
     }
     else if(tries < 4)
     {
-        self.oneBtn.hidden = YES;
+        [btnPushed setHidden: YES];
     }
     else
     {
         [self lose];
-        self.oneBtn.hidden = YES;
+        [btnPushed setHidden: YES];
     }
 }
-- (IBAction)btn2Pressed:(id)sender
-{
-    tries++;
-    if(randomNum == 2 && tries <=4)
-    {
-        [self win];
-    }
-    else if(tries < 4)
-    {
-        self.twoBtn.hidden = YES;
-    }
-    else
-    {
-        [self lose];
-        self.twoBtn.hidden = YES;
-    }
-}
-- (IBAction)btn3Pressed:(id)sender
-{
-    tries++;
-    if(randomNum == 3 && tries <=4)
-    {
-        [self win];
-    }
-    else if(tries < 4)
-    {
-        self.threeBtn.hidden = YES;
-    }
-    else
-    {
-        [self lose];
-        self.threeBtn.hidden = YES;
-    }
-}
-- (IBAction)btn4Pressed:(id)sender
-{
-    tries++;
-    if(randomNum == 4 && tries <=4)
-    {
-        [self win];
-    }
-    else if(tries < 4)
-    {
-        self.fourBtn.hidden = YES;
-    }
-    else
-    {
-        [self lose];
-        self.fourBtn.hidden = YES;
-    }
-}
-- (IBAction)btn5Pressed:(id)sender
-{
-    tries++;
-    if(randomNum == 5 && tries <=4)
-    {
-        [self win];
-    }
-    else if(tries < 4)
-    {
-        self.fiveBtn.hidden = YES;
-    }
-    else
-    {
-        [self lose];
-        self.fiveBtn.hidden = YES;
-    }
-}
-- (IBAction)btn6Pressed:(id)sender
-{
-    tries++;
-    if(randomNum == 6 && tries <=4)
-    {
-        [self win];
-    }
-    else if(tries < 4)
-    {
-        self.sixBtn.hidden = YES;
-    }
-    else
-    {
-        [self lose];
-        self.sixBtn.hidden = YES;
-    }
-}
-- (IBAction)btn7Pressed:(id)sender
-{
-    tries++;
-    if(randomNum == 7 && tries <=4)
-    {
-        [self win];
-    }
-    else if(tries < 4)
-    {
-        self.sevenBtn.hidden = YES;
-    }
-    else
-    {
-        [self lose];
-        self.sevenBtn.hidden = YES;
-    }
-}
-- (IBAction)btn8Pressed:(id)sender
-{
-    tries++;
-    if(randomNum == 8 && tries <=4)
-    {
-        [self win];
-    }
-    else if(tries < 4)
-    {
-        self.eightBtn.hidden = YES;
-    }
-    else
-    {
-        [self lose];
-        self.eightBtn.hidden = YES;
-    }
-}
-- (IBAction)btn9Pressed:(id)sender
-{
-    tries++;
-    if(randomNum == 9 && tries <=4)
-    {
-        [self win];
-    }
-    else if(tries < 4)
-    {
-        self.nineBtn.hidden = YES;
-    }
-    else
-    {
-        [self lose];
-        self.nineBtn.hidden = YES;
-    }
-}
+
 - (IBAction)btnPlayAgainPressed:(id)sender
 {
     [self randomPick];
+    
     // show all the buttons again
-    self.oneBtn.hidden = NO;
-    self.twoBtn.hidden = NO;
-    self.threeBtn.hidden = NO;
-    self.fourBtn.hidden = NO;
-    self.fiveBtn.hidden = NO;
-    self.sixBtn.hidden = NO;
-    self.sevenBtn.hidden = NO;
-    self.eightBtn.hidden = NO;
-    self.nineBtn.hidden = NO;
+    [self showBtns];
+    
     // reset game message
     [self.winLabel setText: @"Guess a number."];
 }

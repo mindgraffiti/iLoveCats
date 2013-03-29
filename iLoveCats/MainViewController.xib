@@ -309,6 +309,7 @@
 						<string key="NSFrame">{{208, 480}, {48, 48}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -406,78 +407,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">oneBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="191214129"/>
-					</object>
-					<int key="connectionID">329</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">twoBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="91049431"/>
-					</object>
-					<int key="connectionID">330</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">threeBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1041083180"/>
-					</object>
-					<int key="connectionID">331</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">fourBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="186560259"/>
-					</object>
-					<int key="connectionID">332</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">fiveBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="450553062"/>
-					</object>
-					<int key="connectionID">333</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">sixBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="181208473"/>
-					</object>
-					<int key="connectionID">334</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">sevenBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="833763940"/>
-					</object>
-					<int key="connectionID">335</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">eightBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="91729980"/>
-					</object>
-					<int key="connectionID">336</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">nineBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="366136553"/>
-					</object>
-					<int key="connectionID">337</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">cat1</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="808084814"/>
@@ -517,85 +446,175 @@
 					<int key="connectionID">374</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">guessButtons</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="191214129"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">391</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">guessButtons</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="91049431"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">392</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">guessButtons</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1041083180"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">393</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">guessButtons</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="186560259"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">394</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">guessButtons</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="450553062"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">395</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">guessButtons</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="181208473"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">396</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">guessButtons</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="833763940"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">397</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">guessButtons</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="91729980"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">398</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletCollectionConnection" key="connection">
+						<string key="label">guessButtons</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="366136553"/>
+						<string key="cachedDesigntimeCollectionClassName">NSArray</string>
+						<bool key="addsContentToExistingCollection">NO</bool>
+					</object>
+					<int key="connectionID">399</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btn1Pressed:</string>
+						<string key="label">btnSelected:</string>
 						<reference key="source" ref="191214129"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">360</int>
+					<int key="connectionID">379</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btn2Pressed:</string>
+						<string key="label">btnSelected:</string>
 						<reference key="source" ref="91049431"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">363</int>
+					<int key="connectionID">380</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btn3Pressed:</string>
+						<string key="label">btnSelected:</string>
 						<reference key="source" ref="1041083180"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">364</int>
+					<int key="connectionID">381</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btn4Pressed:</string>
+						<string key="label">btnSelected:</string>
 						<reference key="source" ref="186560259"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">365</int>
+					<int key="connectionID">382</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btn5Pressed:</string>
+						<string key="label">btnSelected:</string>
 						<reference key="source" ref="450553062"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">366</int>
+					<int key="connectionID">383</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btn6Pressed:</string>
+						<string key="label">btnSelected:</string>
 						<reference key="source" ref="181208473"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">367</int>
+					<int key="connectionID">384</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btn7Pressed:</string>
+						<string key="label">btnSelected:</string>
 						<reference key="source" ref="833763940"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">368</int>
+					<int key="connectionID">385</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btn8Pressed:</string>
+						<string key="label">btnSelected:</string>
 						<reference key="source" ref="91729980"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">369</int>
+					<int key="connectionID">386</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btn9Pressed:</string>
+						<string key="label">btnSelected:</string>
 						<reference key="source" ref="366136553"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">370</int>
+					<int key="connectionID">387</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -1326,7 +1345,6 @@
 							<reference ref="808084814"/>
 							<reference ref="151701282"/>
 							<reference ref="341737617"/>
-							<reference ref="191214129"/>
 							<reference ref="1041083180"/>
 							<reference ref="91049431"/>
 							<reference ref="91729980"/>
@@ -1338,6 +1356,7 @@
 							<reference ref="396085302"/>
 							<reference ref="158780856"/>
 							<reference ref="498609559"/>
+							<reference ref="191214129"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -2150,7 +2169,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">378</int>
+			<int key="maxID">399</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2158,56 +2177,16 @@
 					<string key="className">MainViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="btn1Pressed:">id</string>
-						<string key="btn2Pressed:">id</string>
-						<string key="btn3Pressed:">id</string>
-						<string key="btn4Pressed:">id</string>
-						<string key="btn5Pressed:">id</string>
-						<string key="btn6Pressed:">id</string>
-						<string key="btn7Pressed:">id</string>
-						<string key="btn8Pressed:">id</string>
-						<string key="btn9Pressed:">id</string>
 						<string key="btnPlayAgainPressed:">id</string>
+						<string key="btnSelected:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="btn1Pressed:">
-							<string key="name">btn1Pressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btn2Pressed:">
-							<string key="name">btn2Pressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btn3Pressed:">
-							<string key="name">btn3Pressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btn4Pressed:">
-							<string key="name">btn4Pressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btn5Pressed:">
-							<string key="name">btn5Pressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btn6Pressed:">
-							<string key="name">btn6Pressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btn7Pressed:">
-							<string key="name">btn7Pressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btn8Pressed:">
-							<string key="name">btn8Pressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="btn9Pressed:">
-							<string key="name">btn9Pressed:</string>
-							<string key="candidateClassName">id</string>
-						</object>
 						<object class="IBActionInfo" key="btnPlayAgainPressed:">
 							<string key="name">btnPlayAgainPressed:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="btnSelected:">
+							<string key="name">btnSelected:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
@@ -2215,16 +2194,7 @@
 						<string key="cat1">UIImageView</string>
 						<string key="cat2">UIImageView</string>
 						<string key="cat3">UIImageView</string>
-						<string key="eightBtn">UIButton</string>
-						<string key="fiveBtn">UIButton</string>
-						<string key="fourBtn">UIButton</string>
-						<string key="nineBtn">UIButton</string>
-						<string key="oneBtn">UIButton</string>
 						<string key="playAgain">UIButton</string>
-						<string key="sevenBtn">UIButton</string>
-						<string key="sixBtn">UIButton</string>
-						<string key="threeBtn">UIButton</string>
-						<string key="twoBtn">UIButton</string>
 						<string key="winLabel">UILabel</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -2240,44 +2210,8 @@
 							<string key="name">cat3</string>
 							<string key="candidateClassName">UIImageView</string>
 						</object>
-						<object class="IBToOneOutletInfo" key="eightBtn">
-							<string key="name">eightBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="fiveBtn">
-							<string key="name">fiveBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="fourBtn">
-							<string key="name">fourBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="nineBtn">
-							<string key="name">nineBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="oneBtn">
-							<string key="name">oneBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
 						<object class="IBToOneOutletInfo" key="playAgain">
 							<string key="name">playAgain</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sevenBtn">
-							<string key="name">sevenBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="sixBtn">
-							<string key="name">sixBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="threeBtn">
-							<string key="name">threeBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="twoBtn">
-							<string key="name">twoBtn</string>
 							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="winLabel">
@@ -2285,6 +2219,14 @@
 							<string key="candidateClassName">UILabel</string>
 						</object>
 					</dictionary>
+					<object class="NSMutableDictionary" key="toManyOutletInfosByName">
+						<string key="NS.key.0">guessButtons</string>
+						<object class="IBToManyOutletInfo" key="NS.object.0">
+							<string key="name">guessButtons</string>
+							<string key="candidateClassName">UIButton</string>
+							<string key="collectionClassName">NSArray</string>
+						</object>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/MainViewController.h</string>
