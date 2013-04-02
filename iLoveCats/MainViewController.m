@@ -87,6 +87,8 @@ int totalLosses;
     {
         // count up wins
         totalWins++;
+        
+        // This needs more refactoring.
         if(totalWins == 1)
         {
             // show a cat
