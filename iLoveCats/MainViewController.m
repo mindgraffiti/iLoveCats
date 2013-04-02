@@ -39,7 +39,7 @@ int totalLosses;
     if(overage)
     {
         // remove all the buttons from the screen
-        [self hideBtns];
+        [self hideButtons];
         [self hideWins];
         
         // send game message
@@ -121,7 +121,7 @@ int totalLosses;
     if(totalLosses == 4)
     {
         // remove all the buttons from the screen
-        [self hideBtns];
+        [self hideButtons];
         // send game message
         [self.winLabel setText:@"Game over."];
         // reset game message
@@ -132,15 +132,15 @@ int totalLosses;
     {
         [self.winLabel setText:@"You lose!"];
         // remove all the buttons from the screen
-        [self hideBtns];
+        [self hideButtons];
         self.playAgain.hidden = NO;
     }
 }
-- (void) hideBtns
+- (void) hideButtons
 {
     [self.guessButtons setValue: [NSNumber numberWithBool:YES] forKey:@"hidden"];
 }
-- (void) showBtns
+- (void) showButtons
 {
     [self.guessButtons setValue:[NSNumber numberWithBool:NO] forKey:@"hidden"];
 }
@@ -149,9 +149,9 @@ int totalLosses;
 {
     [self.catTally setValue:[NSNumber numberWithBool:YES] forKey:@"hidden"];
 }
-- (IBAction)btnSelected:(id)sender
+- (IBAction)ButtonSelected:(id)sender
 {
-    UIButton *btnPushed = (UIButton *)sender;
+    UIButton *ButtonPushed = (UIButton *)sender;
     NSLog(@"Button pressed: %@",[sender currentTitle]);
     tries++;
     
@@ -161,20 +161,20 @@ int totalLosses;
     }
     else if(tries < 4)
     {
-        [btnPushed setHidden: YES];
+        [ButtonPushed setHidden: YES];
     }
     else
     {
         [self lose];
-        [btnPushed setHidden: YES];
+        [ButtonPushed setHidden: YES];
     }
 }
-- (IBAction)btnPlayAgainPressed:(id)sender
+- (IBAction)ButtonPlayAgainPressed:(id)sender
 {
     [self randomPick];
     
     // show all the buttons again
-    [self showBtns];
+    [self showButtons];
     
     // reset game message
     [self.winLabel setText: @"Guess a number."];

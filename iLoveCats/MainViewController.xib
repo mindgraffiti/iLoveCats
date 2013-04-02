@@ -309,6 +309,7 @@
 						<string key="NSFrame">{{208, 480}, {48, 48}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -567,93 +568,93 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnSelected:</string>
+						<string key="label">ButtonSelected:</string>
 						<reference key="source" ref="191214129"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">379</int>
+					<int key="connectionID">438</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnSelected:</string>
+						<string key="label">ButtonSelected:</string>
 						<reference key="source" ref="91049431"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">380</int>
+					<int key="connectionID">447</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnSelected:</string>
+						<string key="label">ButtonSelected:</string>
 						<reference key="source" ref="1041083180"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">381</int>
+					<int key="connectionID">440</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnSelected:</string>
+						<string key="label">ButtonSelected:</string>
 						<reference key="source" ref="186560259"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">382</int>
+					<int key="connectionID">441</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnSelected:</string>
+						<string key="label">ButtonSelected:</string>
 						<reference key="source" ref="450553062"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">383</int>
+					<int key="connectionID">442</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnSelected:</string>
+						<string key="label">ButtonSelected:</string>
 						<reference key="source" ref="181208473"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">384</int>
+					<int key="connectionID">443</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnSelected:</string>
+						<string key="label">ButtonSelected:</string>
 						<reference key="source" ref="833763940"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">385</int>
+					<int key="connectionID">444</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnSelected:</string>
+						<string key="label">ButtonSelected:</string>
 						<reference key="source" ref="91729980"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">386</int>
+					<int key="connectionID">445</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnSelected:</string>
+						<string key="label">ButtonSelected:</string>
 						<reference key="source" ref="366136553"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">387</int>
+					<int key="connectionID">446</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">btnPlayAgainPressed:</string>
+						<string key="label">ButtonPlayAgainPressed:</string>
 						<reference key="source" ref="396085302"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">372</int>
+					<int key="connectionID">437</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -2202,7 +2203,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">435</int>
+			<int key="maxID">447</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2210,16 +2211,16 @@
 					<string key="className">MainViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="btnPlayAgainPressed:">id</string>
-						<string key="btnSelected:">id</string>
+						<string key="ButtonPlayAgainPressed:">id</string>
+						<string key="ButtonSelected:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="btnPlayAgainPressed:">
-							<string key="name">btnPlayAgainPressed:</string>
+						<object class="IBActionInfo" key="ButtonPlayAgainPressed:">
+							<string key="name">ButtonPlayAgainPressed:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="btnSelected:">
-							<string key="name">btnSelected:</string>
+						<object class="IBActionInfo" key="ButtonSelected:">
+							<string key="name">ButtonSelected:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>
