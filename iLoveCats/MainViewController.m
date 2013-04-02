@@ -12,10 +12,12 @@
 @interface MainViewController ()
 
 @end
+
 int randomNum;
 int tries;
 int totalWins;
 int totalLosses;
+
 @implementation MainViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
