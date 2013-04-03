@@ -10,4 +10,18 @@
 
 @implementation GuessingGame
 
+- (int)answer
+{
+    self.randomNum = arc4random_uniform(9);
+    if(self.randomNum == 5 || self.randomNum ==0)
+    {
+        NSLog(@"0 or 5 picked, re-rolling...");
+        [self answer];
+    }
+    NSLog(@"Number chosen at random: %d",self.randomNum);
+    self.tries = 0;
+    return self.randomNum;
+    
+}
+
 @end

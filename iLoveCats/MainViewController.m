@@ -13,7 +13,7 @@
 
 @interface MainViewController ()
 
-// the variable
+// declare the variable
 @property (strong, nonatomic) GuessingGame *game;
 
 @end
@@ -36,7 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    // instantiate the variable
+    // instance of GuessingGame
     self.game = [[GuessingGame alloc] init];
     // check to see if user has too many losses
     BOOL overage = [[NSUserDefaults standardUserDefaults]boolForKey:@"heavyLosses"];
@@ -52,24 +52,15 @@
         // reset game message
         [self nag];
     }
-    
-    [self randomPick];
+    [self.game answer];
+    [self refreshUI];
     // hide win markers (black cats)
     [self hideWins];
     
 }
 
-- (int)randomPick
+- (int)refreshUI
 {
-    // inheritance?
-    self.game.randomNum = arc4random_uniform(9);
-    if(self.game.randomNum == 5 || self.game.randomNum ==0)
-    {
-        NSLog(@"0 or 5 picked, re-rolling...");
-        [self randomPick];
-    }
-    NSLog(@"Number chosen at random: %d",self.game.randomNum);
-    self.game.tries = 0;
     self.playAgain.hidden = YES;
     [self.guessButtons setValue:[NSNumber numberWithBool:YES] forKey:@"enabled"];
     return self.game.randomNum;
@@ -176,7 +167,8 @@
 }
 - (IBAction)ButtonPlayAgainPressed:(id)sender
 {
-    [self randomPick];
+    [self.game answer];
+    [self refreshUI];
     
     // show all the buttons again
     [self showButtons];
