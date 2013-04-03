@@ -8,15 +8,17 @@
 
 #import "MainViewController.h"
 #import "WinViewController.h"
+#import "GuessingGame.h"
+#import "Choice.h"
 
 @interface MainViewController ()
 
+// the variable
+@property (strong, nonatomic) GuessingGame *game;
+
 @end
 
-int randomNum;
-int tries;
-int totalWins;
-int totalLosses;
+
 
 @implementation MainViewController
 
@@ -34,6 +36,8 @@ int totalLosses;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    // instantiate the variable
+    self.game = [[GuessingGame alloc] init];
     // check to see if user has too many losses
     BOOL overage = [[NSUserDefaults standardUserDefaults]boolForKey:@"heavyLosses"];
     if(overage)
@@ -57,17 +61,18 @@ int totalLosses;
 
 - (int)randomPick
 {
-    randomNum = arc4random_uniform(9);
-    if(randomNum == 5 || randomNum ==0)
+    // inheritance?
+    self.game.randomNum = arc4random_uniform(9);
+    if(self.game.randomNum == 5 || self.game.randomNum ==0)
     {
         NSLog(@"0 or 5 picked, re-rolling...");
         [self randomPick];
     }
-    NSLog(@"Number chosen at random: %d",randomNum);
-    tries = 0;
+    NSLog(@"Number chosen at random: %d",self.game.randomNum);
+    self.game.tries = 0;
     self.playAgain.hidden = YES;
     [self.guessButtons setValue:[NSNumber numberWithBool:YES] forKey:@"enabled"];
-    return randomNum;
+    return self.game.randomNum;
     
 }
 - (void) nag
@@ -78,7 +83,7 @@ int totalLosses;
 
 - (void) win
 {
-    if(totalWins == 3)
+    if(self.game.totalWins == 3)
     {
         // show new view with happy cat
         
@@ -86,19 +91,19 @@ int totalLosses;
     else
     {
         // count up wins
-        totalWins++;
+        self.game.totalWins++;
         
         // This needs more refactoring.
-        if(totalWins == 1)
+        if(self.game.totalWins == 1)
         {
             // show a cat
             self.cat1.hidden = NO;
         }
-        else if(totalWins == 2)
+        else if(self.game.totalWins == 2)
         {
             self.cat2.hidden = NO;
         }
-        else if(totalWins == 3){
+        else if(self.game.totalWins == 3){
             [self.catTally setValue:[NSNumber numberWithBool:NO] forKey:@"hidden"];
             // point to where winView is located
             WinViewController *view;
@@ -117,8 +122,8 @@ int totalLosses;
 }
 - (void) lose
 {
-    totalLosses++;
-    if(totalLosses == 4)
+    self.game.totalLosses++;
+    if(self.game.totalLosses == 4)
     {
         // remove all the buttons from the screen
         [self hideButtons];
@@ -153,13 +158,13 @@ int totalLosses;
 {
     UIButton *ButtonPushed = (UIButton *)sender;
     NSLog(@"Button pressed: %@",[sender currentTitle]);
-    tries++;
+    self.game.tries++;
     
-    if(randomNum == [[sender currentTitle] integerValue]&& tries <= 4)
+    if(self.game.randomNum == [[sender currentTitle] integerValue]&& self.game.tries <= 4)
     {
         [self win];
     }
-    else if(tries < 4)
+    else if(self.game.tries < 4)
     {
         [ButtonPushed setHidden: YES];
     }
