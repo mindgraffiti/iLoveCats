@@ -10,6 +10,17 @@
 
 @implementation GuessingGame
 
+- (id) init
+{
+    self = [super init];
+    if(self)
+    {
+        self.maxTries = 4;
+        self.maxPlays = 4;
+    }
+    return self;
+}
+
 - (int)answer
 {
     self.randomNum = arc4random_uniform(9);

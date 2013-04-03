@@ -74,47 +74,40 @@
 
 - (void) win
 {
-    if(self.game.totalWins == 3)
+    // count up wins
+    self.game.totalWins++;
+    
+    // This needs more refactoring.
+    if(self.game.totalWins == 1)
     {
-        // show new view with happy cat
-        
+        // show a cat
+        self.cat1.hidden = NO;
     }
-    else
+    else if(self.game.totalWins == 2)
     {
-        // count up wins
-        self.game.totalWins++;
-        
-        // This needs more refactoring.
-        if(self.game.totalWins == 1)
-        {
-            // show a cat
-            self.cat1.hidden = NO;
-        }
-        else if(self.game.totalWins == 2)
-        {
-            self.cat2.hidden = NO;
-        }
-        else if(self.game.totalWins == 3){
-            [self.catTally setValue:[NSNumber numberWithBool:NO] forKey:@"hidden"];
-            // point to where winView is located
-            WinViewController *view;
-            // alloc memory to winView
-            view = [[WinViewController alloc ]init];
-            // move them to the winView
-            [self presentViewController:view animated:YES completion:Nil];
-        }
-        // disable buttons for further guessing
-        [self.guessButtons setValue:[NSNumber numberWithBool:NO] forKey:@"enabled"];
-        // you got it! msg
-        [self.winLabel setText:@"You win! Have a cat."];
-        // show play again button
-        self.playAgain.hidden = NO;
+        self.cat2.hidden = NO;
     }
+    else if(self.game.totalWins == 3){
+        [self.catTally setValue:[NSNumber numberWithBool:NO] forKey:@"hidden"];
+        // point to where winView is located
+        WinViewController *view;
+        // alloc memory to winView
+        view = [[WinViewController alloc ]init];
+        // move them to the winView
+        [self presentViewController:view animated:YES completion:Nil];
+    }
+    // disable buttons for further guessing
+    [self.guessButtons setValue:[NSNumber numberWithBool:NO] forKey:@"enabled"];
+    // you got it! msg
+    [self.winLabel setText:@"You win! Have a cat."];
+    // show play again button
+    self.playAgain.hidden = NO;
+
 }
 - (void) lose
 {
     self.game.totalLosses++;
-    if(self.game.totalLosses == 4)
+    if(self.game.totalLosses == self.game.maxPlays)
     {
         // remove all the buttons from the screen
         [self hideButtons];
@@ -151,11 +144,11 @@
     NSLog(@"Button pressed: %@",[sender currentTitle]);
     self.game.tries++;
     
-    if(self.game.randomNum == [[sender currentTitle] integerValue]&& self.game.tries <= 4)
+    if(self.game.randomNum == [[sender currentTitle] integerValue]&& self.game.tries <= self.game.maxTries)
     {
         [self win];
     }
-    else if(self.game.tries < 4)
+    else if(self.game.tries < self.game.maxTries)
     {
         [ButtonPushed setHidden: YES];
     }

@@ -15,6 +15,8 @@
 @property (assign, nonatomic) int tries;
 @property (assign, nonatomic) int totalWins;
 @property (assign, nonatomic) int totalLosses;
+@property (assign, nonatomic) int maxTries;
+@property (assign, nonatomic) int maxPlays;
 
 
 @end
