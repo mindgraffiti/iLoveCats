@@ -143,8 +143,8 @@
     UIButton *ButtonPushed = (UIButton *)sender;
     NSLog(@"Button pressed: %@",[sender currentTitle]);
     self.game.tries++;
-    
-    if(self.game.randomNum == [[sender currentTitle] integerValue]&& self.game.tries <= self.game.maxTries)
+    int choice = [[sender currentTitle] integerValue];
+    if([self.game playerChoice:choice])
     {
         [self win];
     }

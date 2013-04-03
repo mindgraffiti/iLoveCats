@@ -35,4 +35,16 @@
     
 }
 
+- (BOOL) playerChoice:(int) pick
+{
+    if(self.randomNum == pick && self.tries <= self.maxTries)
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
 @end

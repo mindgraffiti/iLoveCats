@@ -18,5 +18,6 @@
 @property (assign, nonatomic) int maxTries;
 @property (assign, nonatomic) int maxPlays;
 
+- (BOOL) playerChoice:(int) pick;
 
 @end
