@@ -9,5 +9,4 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 @interface WinViewController : UIViewController
-
 @end

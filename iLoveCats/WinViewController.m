@@ -23,12 +23,17 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    //UISwipeGestureRecognizer *oneFingerSwipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(oneFingerSwipeDown:)];
+    
+    //[oneFingerSwipeDown setDirection:UISwipeGestureRecognizerDirectionDown];
+    //[[self view] addGestureRecognizer:oneFingerSwipeDown];
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -23,7 +23,6 @@
 		AF974B741703B6D400DE65D0 /* black_cat.png in Resources */ = {isa = PBXBuildFile; fileRef = AF974B731703B6D400DE65D0 /* black_cat.png */; };
 		AF974B761703B8C800DE65D0 /* cat-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF974B751703B8C800DE65D0 /* cat-logo.png */; };
 		AFA0099F170BA0A0001C621F /* GuessingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA0099E170BA0A0001C621F /* GuessingGame.m */; };
-		AFA009A2170BA172001C621F /* Choice.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA009A1170BA172001C621F /* Choice.m */; };
 		AFA0EF6A1704FE6600219C31 /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA0EF691704FE6600219C31 /* icon57px.png */; };
 		AFA0EF6C1704FEAC00219C31 /* icon114px.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA0EF6B1704FEAC00219C31 /* icon114px.png */; };
 		AFAAB26A170A3EEE00CC180F /* cat_5.png in Resources */ = {isa = PBXBuildFile; fileRef = AFAAB269170A3EEE00CC180F /* cat_5.png */; };
@@ -59,8 +58,6 @@
 		AF974B751703B8C800DE65D0 /* cat-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cat-logo.png"; path = "iLoveCats/cat-logo.png"; sourceTree = "<group>"; };
 		AFA0099D170BA0A0001C621F /* GuessingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuessingGame.h; sourceTree = "<group>"; };
 		AFA0099E170BA0A0001C621F /* GuessingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuessingGame.m; sourceTree = "<group>"; };
-		AFA009A0170BA172001C621F /* Choice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Choice.h; sourceTree = "<group>"; };
-		AFA009A1170BA172001C621F /* Choice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Choice.m; sourceTree = "<group>"; };
 		AFA0EF691704FE6600219C31 /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
 		AFA0EF6B1704FEAC00219C31 /* icon114px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114px.png; sourceTree = "<group>"; };
 		AFAAB269170A3EEE00CC180F /* cat_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat_5.png; sourceTree = "<group>"; };
@@ -170,8 +167,6 @@
 		AFA00995170B9BB1001C621F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AFA009A0170BA172001C621F /* Choice.h */,
-				AFA009A1170BA172001C621F /* Choice.m */,
 				AFA0099D170BA0A0001C621F /* GuessingGame.h */,
 				AFA0099E170BA0A0001C621F /* GuessingGame.m */,
 			);
@@ -262,7 +257,6 @@
 				AF974B6C1703AF1D00DE65D0 /* MainViewController.m in Sources */,
 				AFACE3091704981300768A46 /* WinViewController.m in Sources */,
 				AFA0099F170BA0A0001C621F /* GuessingGame.m in Sources */,
-				AFA009A2170BA172001C621F /* Choice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

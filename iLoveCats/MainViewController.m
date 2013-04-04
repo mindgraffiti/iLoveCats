@@ -9,7 +9,6 @@
 #import "MainViewController.h"
 #import "WinViewController.h"
 #import "GuessingGame.h"
-#import "Choice.h"
 
 @interface MainViewController ()
 
@@ -26,7 +25,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+    // Custom initialization
     }
     return self;
 }
@@ -38,6 +37,7 @@
     
     // instance of GuessingGame
     self.game = [[GuessingGame alloc] init];
+    
     // check to see if user has too many losses
     BOOL overage = [[NSUserDefaults standardUserDefaults]boolForKey:@"heavyLosses"];
     if(overage)
