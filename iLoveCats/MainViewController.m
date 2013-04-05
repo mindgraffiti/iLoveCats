@@ -12,32 +12,19 @@
 #import "ScoresViewController.h"
 
 @interface MainViewController ()
-
 // declare the variable
 @property (strong, nonatomic) GuessingGame *game;
-
 @end
 
-
-
 @implementation MainViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
     // instance of GuessingGame
     self.game = [[GuessingGame alloc] init];
+    // set the title
+    self.title = @"iLoveCats";
+    // set the back button
     
     // check to see if user has too many losses
     BOOL overage = [[NSUserDefaults standardUserDefaults]boolForKey:@"heavyLosses"];
@@ -46,10 +33,8 @@
         // remove all the buttons from the screen
         [self hideButtons];
         [self hideWins];
-        
         // send game message
         [self.winLabel setText:@"Game over."];
-        
         // reset game message
         [self nag];
     }
@@ -83,19 +68,22 @@
     {
         // show a cat
         self.cat1.hidden = NO;
+        self.duration = [self.game.startTime timeIntervalSinceDate:[NSDate date]];
     }
     else if(self.game.totalWins == 2)
     {
         self.cat2.hidden = NO;
+        self.duration = [self.game.startTime timeIntervalSinceDate:[NSDate date]];
     }
     else if(self.game.totalWins == 3){
         [self.catTally setValue:[NSNumber numberWithBool:NO] forKey:@"hidden"];
+        self.duration = [self.game.startTime timeIntervalSinceDate:[NSDate date]];
         // point to where winView is located
-        WinViewController *view;
+        WinViewController *winView;
         // alloc memory to winView
-        view = [[WinViewController alloc ]init];
+        winView = [[WinViewController alloc] init];
         // move them to the winView
-        [self presentViewController:view animated:YES completion:Nil];
+        [self presentViewController:winView animated:YES completion:Nil];
     }
     // disable buttons for further guessing
     [self.guessButtons setValue:[NSNumber numberWithBool:NO] forKey:@"enabled"];
@@ -147,6 +135,7 @@
     int choice = [[sender currentTitle] integerValue];
     if([self.game playerChoice:choice])
     {
+        [self saveScore];
         [self win];
     }
     else if(self.game.tries < self.game.maxTries)
@@ -173,9 +162,22 @@
 - (IBAction)topScoresPressed:(id)sender
 {
     ScoresViewController *viewScores;
-    viewScores = [[ScoresViewController alloc] init];
-    [self presentViewController:viewScores animated:YES completion:nil];
+    viewScores = [[ScoresViewController alloc] initWithNibName:@"ScoresViewController" bundle:nil];
     
+    [self.navigationController pushViewController:viewScores animated:YES];
+    
+}
+
+- (void)saveScore
+{
+    NSMutableArray *scores = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"scores"] mutableCopy];
+    // if nil, alloc mem and initialize the array
+    if(!scores)
+    {
+        scores = [[NSMutableArray alloc] init];
+    }
+    [scores addObject:[NSNumber numberWithDouble:self.game.duration]];
+    [[NSUserDefaults standardUserDefaults] setValue:scores forKey:@"scores"];
 }
 - (void)didReceiveMemoryWarning
 {

@@ -10,24 +10,44 @@
 
 @interface ScoresViewController ()
 
+// make the scores array
+@property(strong, nonatomic) NSArray *scores;
 @end
 
 @implementation ScoresViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    // Set the title for the table view
+    self.title = @"Top Scores";
+    // Make the scores persist in user defaults
+    self.scores = [[NSUserDefaults standardUserDefaults] arrayForKey:@"scores"];
+    // reload table data
+    [self.tableView reloadData];
 }
+
+// method to populate the data in the table view
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.scores.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if(!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    // save your times in a variable
+    id time = self.scores[indexPath.row];
+    // write the time into the cells
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",time];    
+    return cell;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

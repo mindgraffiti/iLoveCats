@@ -20,4 +20,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *cat2;
 @property (strong, nonatomic) IBOutlet UIImageView *cat3;
 
+@property (nonatomic) NSTimeInterval duration;
+
 @end

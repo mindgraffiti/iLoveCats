@@ -17,6 +17,8 @@
 @property (assign, nonatomic) int totalLosses;
 @property (assign, nonatomic) int maxTries;
 @property (assign, nonatomic) int maxPlays;
+@property (strong, nonatomic) NSDate *startTime;
+@property (nonatomic) NSTimeInterval duration;
 
 - (BOOL) playerChoice:(int) pick;
 

@@ -7,7 +7,9 @@
 //
 
 #import "GuessingGame.h"
+@interface GuessingGame()
 
+@end
 
 @implementation GuessingGame
 
@@ -32,6 +34,7 @@
     }
     NSLog(@"Number chosen at random: %d",self.randomNum);
     self.tries = 0;
+    self.startTime = [NSDate date];
     return self.randomNum;
     
 }
