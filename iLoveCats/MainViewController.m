@@ -81,11 +81,12 @@
         // point to where winView is located
         WinViewController *winView;
         // alloc memory to winView
-        winView = [[WinViewController alloc] init];
+        winView = [[WinViewController alloc] initWithNibName:@"WinViewController" bundle:nil];
         // move them to the winView
-        [self presentViewController:winView animated:YES completion:Nil];
+        [self setTitle: @"back"];
+        [self.navigationController pushViewController:winView animated:YES];
     }
-    // disable buttons for further guessing
+    // disable buttons from further guessing
     [self.guessButtons setValue:[NSNumber numberWithBool:NO] forKey:@"enabled"];
     // you got it! msg
     [self.winLabel setText:@"You win! Have a cat."];
@@ -163,7 +164,7 @@
 {
     ScoresViewController *viewScores;
     viewScores = [[ScoresViewController alloc] initWithNibName:@"ScoresViewController" bundle:nil];
-    
+    [self setTitle: @"back"];
     [self.navigationController pushViewController:viewScores animated:YES];
     
 }
@@ -178,6 +179,7 @@
     }
     [scores addObject:[NSNumber numberWithDouble:self.game.duration]];
     [[NSUserDefaults standardUserDefaults] setValue:scores forKey:@"scores"];
+    
 }
 - (void)didReceiveMemoryWarning
 {

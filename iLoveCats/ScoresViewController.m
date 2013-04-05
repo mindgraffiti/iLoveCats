@@ -28,7 +28,7 @@
     [self.tableView reloadData];
 }
 
-// method to populate the data in the table view
+// method to populate the timed games in the table view
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.scores.count;
@@ -44,7 +44,8 @@
     // save your times in a variable
     id time = self.scores[indexPath.row];
     // write the time into the cells
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",time];    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",time];
+    NSLog(@"Your time is: %@", time);
     return cell;
 }
 
