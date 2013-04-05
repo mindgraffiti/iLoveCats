@@ -22,6 +22,8 @@
 		AF974B721703B67700DE65D0 /* play-again.png in Resources */ = {isa = PBXBuildFile; fileRef = AF974B711703B67700DE65D0 /* play-again.png */; };
 		AF974B741703B6D400DE65D0 /* black_cat.png in Resources */ = {isa = PBXBuildFile; fileRef = AF974B731703B6D400DE65D0 /* black_cat.png */; };
 		AF974B761703B8C800DE65D0 /* cat-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF974B751703B8C800DE65D0 /* cat-logo.png */; };
+		AF9B8A14170E4E5500C6255C /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B8A12170E4E5500C6255C /* ScoresViewController.m */; };
+		AF9B8A15170E4E5500C6255C /* ScoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9B8A13170E4E5500C6255C /* ScoresViewController.xib */; };
 		AFA0099F170BA0A0001C621F /* GuessingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA0099E170BA0A0001C621F /* GuessingGame.m */; };
 		AFA0EF6A1704FE6600219C31 /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA0EF691704FE6600219C31 /* icon57px.png */; };
 		AFA0EF6C1704FEAC00219C31 /* icon114px.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA0EF6B1704FEAC00219C31 /* icon114px.png */; };
@@ -56,6 +58,9 @@
 		AF974B711703B67700DE65D0 /* play-again.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-again.png"; path = "iLoveCats/play-again.png"; sourceTree = "<group>"; };
 		AF974B731703B6D400DE65D0 /* black_cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_cat.png; sourceTree = "<group>"; };
 		AF974B751703B8C800DE65D0 /* cat-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cat-logo.png"; path = "iLoveCats/cat-logo.png"; sourceTree = "<group>"; };
+		AF9B8A11170E4E5500C6255C /* ScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresViewController.h; sourceTree = "<group>"; };
+		AF9B8A12170E4E5500C6255C /* ScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresViewController.m; sourceTree = "<group>"; };
+		AF9B8A13170E4E5500C6255C /* ScoresViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoresViewController.xib; sourceTree = "<group>"; };
 		AFA0099D170BA0A0001C621F /* GuessingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuessingGame.h; sourceTree = "<group>"; };
 		AFA0099E170BA0A0001C621F /* GuessingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuessingGame.m; sourceTree = "<group>"; };
 		AFA0EF691704FE6600219C31 /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
@@ -126,6 +131,9 @@
 				AF974B5B1703AEF800DE65D0 /* AppDelegate.h */,
 				AF974B5C1703AEF800DE65D0 /* AppDelegate.m */,
 				AF974B531703AEF800DE65D0 /* Supporting Files */,
+				AF9B8A11170E4E5500C6255C /* ScoresViewController.h */,
+				AF9B8A12170E4E5500C6255C /* ScoresViewController.m */,
+				AF9B8A13170E4E5500C6255C /* ScoresViewController.xib */,
 			);
 			path = iLoveCats;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 				AFA0EF6A1704FE6600219C31 /* icon57px.png in Resources */,
 				AFA0EF6C1704FEAC00219C31 /* icon114px.png in Resources */,
 				AFAAB26A170A3EEE00CC180F /* cat_5.png in Resources */,
+				AF9B8A15170E4E5500C6255C /* ScoresViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +266,7 @@
 				AF974B6C1703AF1D00DE65D0 /* MainViewController.m in Sources */,
 				AFACE3091704981300768A46 /* WinViewController.m in Sources */,
 				AFA0099F170BA0A0001C621F /* GuessingGame.m in Sources */,
+				AF9B8A14170E4E5500C6255C /* ScoresViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

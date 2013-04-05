@@ -11,6 +11,7 @@
 @interface MainViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *playAgain;
+@property (strong, nonatomic) IBOutlet UIButton *topScores;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *guessButtons;
 
 @property (strong, nonatomic) IBOutlet UILabel *winLabel;

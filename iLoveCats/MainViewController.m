@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "WinViewController.h"
 #import "GuessingGame.h"
+#import "ScoresViewController.h"
 
 @interface MainViewController ()
 
@@ -168,6 +169,13 @@
     
     // reset game message
     [self.winLabel setText: @"Guess a number."];
+}
+- (IBAction)topScoresPressed:(id)sender
+{
+    ScoresViewController *viewScores;
+    viewScores = [[ScoresViewController alloc] init];
+    [self presentViewController:viewScores animated:YES completion:nil];
+    
 }
 - (void)didReceiveMemoryWarning
 {
