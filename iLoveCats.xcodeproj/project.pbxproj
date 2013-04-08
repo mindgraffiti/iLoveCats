@@ -22,6 +22,9 @@
 		AF974B721703B67700DE65D0 /* play-again.png in Resources */ = {isa = PBXBuildFile; fileRef = AF974B711703B67700DE65D0 /* play-again.png */; };
 		AF974B741703B6D400DE65D0 /* black_cat.png in Resources */ = {isa = PBXBuildFile; fileRef = AF974B731703B6D400DE65D0 /* black_cat.png */; };
 		AF974B761703B8C800DE65D0 /* cat-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AF974B751703B8C800DE65D0 /* cat-logo.png */; };
+		AF9B8A14170E4E5500C6255C /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B8A12170E4E5500C6255C /* ScoresViewController.m */; };
+		AF9B8A15170E4E5500C6255C /* ScoresViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9B8A13170E4E5500C6255C /* ScoresViewController.xib */; };
+		AFA0099F170BA0A0001C621F /* GuessingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA0099E170BA0A0001C621F /* GuessingGame.m */; };
 		AFA0EF6A1704FE6600219C31 /* icon57px.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA0EF691704FE6600219C31 /* icon57px.png */; };
 		AFA0EF6C1704FEAC00219C31 /* icon114px.png in Resources */ = {isa = PBXBuildFile; fileRef = AFA0EF6B1704FEAC00219C31 /* icon114px.png */; };
 		AFAAB26A170A3EEE00CC180F /* cat_5.png in Resources */ = {isa = PBXBuildFile; fileRef = AFAAB269170A3EEE00CC180F /* cat_5.png */; };
@@ -48,19 +51,24 @@
 		AF974B5E1703AEF800DE65D0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AF974B601703AEF800DE65D0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AF974B621703AEF800DE65D0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		AF974B691703AF1D00DE65D0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = iLoveCats/MainViewController.h; sourceTree = "<group>"; };
-		AF974B6A1703AF1D00DE65D0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = iLoveCats/MainViewController.m; sourceTree = "<group>"; };
-		AF974B6B1703AF1D00DE65D0 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = iLoveCats/MainViewController.xib; sourceTree = "<group>"; };
+		AF974B691703AF1D00DE65D0 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		AF974B6A1703AF1D00DE65D0 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		AF974B6B1703AF1D00DE65D0 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		AF974B6F1703B3AE00DE65D0 /* Button-Blank-Yellow-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Button-Blank-Yellow-icon.png"; sourceTree = "<group>"; };
 		AF974B711703B67700DE65D0 /* play-again.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-again.png"; path = "iLoveCats/play-again.png"; sourceTree = "<group>"; };
 		AF974B731703B6D400DE65D0 /* black_cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = black_cat.png; sourceTree = "<group>"; };
 		AF974B751703B8C800DE65D0 /* cat-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cat-logo.png"; path = "iLoveCats/cat-logo.png"; sourceTree = "<group>"; };
+		AF9B8A11170E4E5500C6255C /* ScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresViewController.h; sourceTree = "<group>"; };
+		AF9B8A12170E4E5500C6255C /* ScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresViewController.m; sourceTree = "<group>"; };
+		AF9B8A13170E4E5500C6255C /* ScoresViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoresViewController.xib; sourceTree = "<group>"; };
+		AFA0099D170BA0A0001C621F /* GuessingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuessingGame.h; sourceTree = "<group>"; };
+		AFA0099E170BA0A0001C621F /* GuessingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuessingGame.m; sourceTree = "<group>"; };
 		AFA0EF691704FE6600219C31 /* icon57px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57px.png; sourceTree = "<group>"; };
 		AFA0EF6B1704FEAC00219C31 /* icon114px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114px.png; sourceTree = "<group>"; };
 		AFAAB269170A3EEE00CC180F /* cat_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat_5.png; sourceTree = "<group>"; };
-		AFACE3061704981300768A46 /* WinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WinViewController.h; path = iLoveCats/WinViewController.h; sourceTree = "<group>"; };
-		AFACE3071704981300768A46 /* WinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WinViewController.m; path = iLoveCats/WinViewController.m; sourceTree = "<group>"; };
-		AFACE3081704981300768A46 /* WinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WinViewController.xib; path = iLoveCats/WinViewController.xib; sourceTree = "<group>"; };
+		AFACE3061704981300768A46 /* WinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinViewController.h; sourceTree = "<group>"; };
+		AFACE3071704981300768A46 /* WinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinViewController.m; sourceTree = "<group>"; };
+		AFACE3081704981300768A46 /* WinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WinViewController.xib; sourceTree = "<group>"; };
 		AFACE30B17049AA900768A46 /* happy-cat-1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "happy-cat-1024.jpg"; sourceTree = "<group>"; };
 		AFACE30D17049AF000768A46 /* 09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 09.jpg; sourceTree = "<group>"; };
 		AFACE30F17049DCF00768A46 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -85,13 +93,6 @@
 		AF974B401703AEF800DE65D0 = {
 			isa = PBXGroup;
 			children = (
-				AFACE3061704981300768A46 /* WinViewController.h */,
-				AFACE3071704981300768A46 /* WinViewController.m */,
-				AFACE3081704981300768A46 /* WinViewController.xib */,
-				AF974B6E1703B39D00DE65D0 /* imgs */,
-				AF974B691703AF1D00DE65D0 /* MainViewController.h */,
-				AF974B6A1703AF1D00DE65D0 /* MainViewController.m */,
-				AF974B6B1703AF1D00DE65D0 /* MainViewController.xib */,
 				AF974B521703AEF800DE65D0 /* iLoveCats */,
 				AF974B4B1703AEF800DE65D0 /* Frameworks */,
 				AF974B4A1703AEF800DE65D0 /* Products */,
@@ -119,9 +120,20 @@
 		AF974B521703AEF800DE65D0 /* iLoveCats */ = {
 			isa = PBXGroup;
 			children = (
+				AFA00995170B9BB1001C621F /* Model */,
+				AFACE3061704981300768A46 /* WinViewController.h */,
+				AFACE3071704981300768A46 /* WinViewController.m */,
+				AFACE3081704981300768A46 /* WinViewController.xib */,
+				AF974B6E1703B39D00DE65D0 /* imgs */,
+				AF974B691703AF1D00DE65D0 /* MainViewController.h */,
+				AF974B6A1703AF1D00DE65D0 /* MainViewController.m */,
+				AF974B6B1703AF1D00DE65D0 /* MainViewController.xib */,
 				AF974B5B1703AEF800DE65D0 /* AppDelegate.h */,
 				AF974B5C1703AEF800DE65D0 /* AppDelegate.m */,
 				AF974B531703AEF800DE65D0 /* Supporting Files */,
+				AF9B8A11170E4E5500C6255C /* ScoresViewController.h */,
+				AF9B8A12170E4E5500C6255C /* ScoresViewController.m */,
+				AF9B8A13170E4E5500C6255C /* ScoresViewController.xib */,
 			);
 			path = iLoveCats;
 			sourceTree = "<group>";
@@ -157,6 +169,16 @@
 				AF974B6F1703B3AE00DE65D0 /* Button-Blank-Yellow-icon.png */,
 			);
 			name = imgs;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		AFA00995170B9BB1001C621F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFA0099D170BA0A0001C621F /* GuessingGame.h */,
+				AFA0099E170BA0A0001C621F /* GuessingGame.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +250,7 @@
 				AFA0EF6A1704FE6600219C31 /* icon57px.png in Resources */,
 				AFA0EF6C1704FEAC00219C31 /* icon114px.png in Resources */,
 				AFAAB26A170A3EEE00CC180F /* cat_5.png in Resources */,
+				AF9B8A15170E4E5500C6255C /* ScoresViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +265,8 @@
 				AF974B5D1703AEF800DE65D0 /* AppDelegate.m in Sources */,
 				AF974B6C1703AF1D00DE65D0 /* MainViewController.m in Sources */,
 				AFACE3091704981300768A46 /* WinViewController.m in Sources */,
+				AFA0099F170BA0A0001C621F /* GuessingGame.m in Sources */,
+				AF9B8A14170E4E5500C6255C /* ScoresViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

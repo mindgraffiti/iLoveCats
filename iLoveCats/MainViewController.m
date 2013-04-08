@@ -8,31 +8,23 @@
 
 #import "MainViewController.h"
 #import "WinViewController.h"
+#import "GuessingGame.h"
+#import "ScoresViewController.h"
 
 @interface MainViewController ()
-
+// declare the variable
+@property (strong, nonatomic) GuessingGame *game;
 @end
 
-int randomNum;
-int tries;
-int totalWins;
-int totalLosses;
-
 @implementation MainViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // instance of GuessingGame
+    self.game = [[GuessingGame alloc] init];
+    // set the title
+    self.title = @"iLoveCats";
+    // set the back button
     
     // check to see if user has too many losses
     BOOL overage = [[NSUserDefaults standardUserDefaults]boolForKey:@"heavyLosses"];
@@ -41,33 +33,23 @@ int totalLosses;
         // remove all the buttons from the screen
         [self hideButtons];
         [self hideWins];
-        
         // send game message
         [self.winLabel setText:@"Game over."];
-        
         // reset game message
         [self nag];
     }
-    
-    [self randomPick];
+    [self.game answer];
+    [self refreshUI];
     // hide win markers (black cats)
     [self hideWins];
     
 }
 
-- (int)randomPick
+- (int)refreshUI
 {
-    randomNum = arc4random_uniform(9);
-    if(randomNum == 5 || randomNum ==0)
-    {
-        NSLog(@"0 or 5 picked, re-rolling...");
-        [self randomPick];
-    }
-    NSLog(@"Number chosen at random: %d",randomNum);
-    tries = 0;
     self.playAgain.hidden = YES;
     [self.guessButtons setValue:[NSNumber numberWithBool:YES] forKey:@"enabled"];
-    return randomNum;
+    return self.game.randomNum;
     
 }
 - (void) nag
@@ -78,47 +60,44 @@ int totalLosses;
 
 - (void) win
 {
-    if(totalWins == 3)
+    // count up wins
+    self.game.totalWins++;
+    
+    // This needs more refactoring.
+    if(self.game.totalWins == 1)
     {
-        // show new view with happy cat
+        // show a cat
+        self.cat1.hidden = NO;
         
     }
-    else
+    else if(self.game.totalWins == 2)
     {
-        // count up wins
-        totalWins++;
-        
-        // This needs more refactoring.
-        if(totalWins == 1)
-        {
-            // show a cat
-            self.cat1.hidden = NO;
-        }
-        else if(totalWins == 2)
-        {
-            self.cat2.hidden = NO;
-        }
-        else if(totalWins == 3){
-            [self.catTally setValue:[NSNumber numberWithBool:NO] forKey:@"hidden"];
-            // point to where winView is located
-            WinViewController *view;
-            // alloc memory to winView
-            view = [[WinViewController alloc ]init];
-            // move them to the winView
-            [self presentViewController:view animated:YES completion:Nil];
-        }
-        // disable buttons for further guessing
-        [self.guessButtons setValue:[NSNumber numberWithBool:NO] forKey:@"enabled"];
-        // you got it! msg
-        [self.winLabel setText:@"You win! Have a cat."];
-        // show play again button
-        self.playAgain.hidden = NO;
+        self.cat2.hidden = NO;
+        self.duration = [self.game.startTime timeIntervalSinceDate:[NSDate date]];
     }
+    else if(self.game.totalWins == 3){
+        [self.catTally setValue:[NSNumber numberWithBool:NO] forKey:@"hidden"];
+        self.duration = [self.game.startTime timeIntervalSinceDate:[NSDate date]];
+        // point to where winView is located
+        WinViewController *winView;
+        // alloc memory to winView
+        winView = [[WinViewController alloc] initWithNibName:@"WinViewController" bundle:nil];
+        // move them to the winView
+        [self setTitle: @"iLoveCats"];
+        [self.navigationController pushViewController:winView animated:YES];
+    }
+    // disable buttons from further guessing
+    [self.guessButtons setValue:[NSNumber numberWithBool:NO] forKey:@"enabled"];
+    // you got it! msg
+    [self.winLabel setText:@"You win! Have a cat."];
+    // show play again button
+    self.playAgain.hidden = NO;
+
 }
 - (void) lose
 {
-    totalLosses++;
-    if(totalLosses == 4)
+    self.game.totalLosses++;
+    if(self.game.totalLosses == self.game.maxPlays)
     {
         // remove all the buttons from the screen
         [self hideButtons];
@@ -153,13 +132,14 @@ int totalLosses;
 {
     UIButton *ButtonPushed = (UIButton *)sender;
     NSLog(@"Button pressed: %@",[sender currentTitle]);
-    tries++;
-    
-    if(randomNum == [[sender currentTitle] integerValue]&& tries <= 4)
+    self.game.tries++;
+    int choice = [[sender currentTitle] integerValue];
+    if([self.game playerChoice:choice])
     {
+        [self saveScore];
         [self win];
     }
-    else if(tries < 4)
+    else if(self.game.tries < self.game.maxTries)
     {
         [ButtonPushed setHidden: YES];
     }
@@ -171,13 +151,38 @@ int totalLosses;
 }
 - (IBAction)ButtonPlayAgainPressed:(id)sender
 {
-    [self randomPick];
+    [self.game answer];
+    [self refreshUI];
     
     // show all the buttons again
     [self showButtons];
     
     // reset game message
     [self.winLabel setText: @"Guess a number."];
+}
+- (IBAction)topScoresPressed:(id)sender
+{
+    ScoresViewController *viewScores;
+    viewScores = [[ScoresViewController alloc] initWithNibName:@"ScoresViewController" bundle:nil];
+    [self setTitle: @"back"];
+    [self.navigationController pushViewController:viewScores animated:YES];
+    
+}
+
+- (void)saveScore
+{
+    NSMutableArray *scores = [[[NSUserDefaults standardUserDefaults] arrayForKey:@"scores"] mutableCopy];
+    // if nil, alloc mem and initialize the array
+    if(!scores)
+    {
+        scores = [[NSMutableArray alloc] init];
+    }
+    else
+    {
+        [scores addObject:[NSNumber numberWithDouble:self.game.duration]];
+        [[NSUserDefaults standardUserDefaults] setValue:scores forKey:@"scores"];
+        NSLog(@"saveScore: %@", scores);
+    }
 }
 - (void)didReceiveMemoryWarning
 {

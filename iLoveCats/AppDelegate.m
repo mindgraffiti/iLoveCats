@@ -14,15 +14,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
     
-    // allocate memory to the view
-    self.mainView = [[MainViewController alloc]init];
-    
-    // make the mainviewcontroller 'home base'
-    self.window.rootViewController = self.mainView;
-    
+    // change your rootview to the MainViewController
+    UIViewController *rootView = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:rootView];
+    [[self window] setRootViewController:self.navController];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
